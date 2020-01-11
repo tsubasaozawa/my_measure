@@ -1,9 +1,31 @@
-.main-header
-  .main-header__contents-box
-    .main-header__contents-box__left-box
-      ロゴ
-    .main-header__contents-box__right-box
-      .main-header__contents-box__right-box__content
-        %span Menu
-      .main-header__contents-box__right-box__content
-        %span Logout
+.header
+  .main-header
+    .main-header__contents-box
+      .main-header__contents-box__left-box
+        = link_to root_path, class:"none-decoration-link" do
+          I am..
+      .main-header__contents-box__center-box
+        .main-header__contents-box__center-box__search-box
+          -# %input
+          -# %button.btn-search{title: "search", type: "submit"}
+      .main-header__contents-box__right-box
+        .main-header__contents-box__right-box__content
+          .main-header__contents-box__right-box__content__header-menu
+            %span Menu
+            .main-header__contents-box__right-box__content__header-menu__lists-box
+              %ul.main-header__contents-box__right-box__content__header-menu__lists-box__lists
+                = link_to mypage_user_path(current_user), class: "none-decoration-link" do
+                  %li.main-header__contents-box__right-box__content__header-menu__lists-box__lists__list マイページ
+                = link_to "" , class: "none-decoration-link" do
+                  %li.main-header__contents-box__right-box__content__header-menu__lists-box__lists__list ××××××
+
+        .main-header__contents-box__right-box__content
+          = link_to destroy_user_session_path, method: :delete, class:"none-decoration-link" do
+            %span Logout
+.second-header
+  .second-header__left
+    フロントエンドエンジニア
+  .second-header__center
+    サーバーサイドエンジニア
+  .second-header__right
+    インフラエンジニア

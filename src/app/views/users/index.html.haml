@@ -1,14 +1,23 @@
 = render "shared/header"
 .main-container
   .main-container__upper-box
+    .main-container__upper-box__recommend-tag
+      AAA
+    .main-container__upper-box__recommend-tag
+      AAA
+    .main-container__upper-box__recommend-tag
+      AAA
+    .main-container__upper-box__recommend-tag
+      AAA
   .main-container__contents-box
-    .main-container__contents-box__content-card
-      = image_tag "https://demo.a-blogcms.jp/media/001/201902/1c35033abff55e4664a216314d599201.png", class:"main-container__contents-box__content-card__image"
-      .main-container__contents-box__content-card__profile
-        hello world
+    = link_to mypage_user_path(current_user) do
+      .main-container__contents-box__content-card
+        = image_tag "https://blog.softbankselection.jp/files/cache/dcddd5857dd2ba5ff2c9312692cb3c84_f3267.jpg", class:"main-container__contents-box__content-card__image"
+        .main-container__contents-box__content-card__profile
+          hello world
     -# 以下は一時設定のため後ほど削除
     .main-container__contents-box__content-card
-      = image_tag "https://demo.a-blogcms.jp/media/001/201902/1c35033abff55e4664a216314d599201.png", class:"main-container__contents-box__content-card__image"
+      = image_tag "https://blog.softbankselection.jp/files/6514/6892/2380/b.jpg", class:"main-container__contents-box__content-card__image"
       .main-container__contents-box__content-card__profile
         hello world
     .main-container__contents-box__content-card
